@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0: #ebe5c5;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', 'cursive';
+    --fonte-android: 'Android', 'cursive';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+    margin: 10px ;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor5), var(--cor3));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    font-size: 3em;
+    text-shadow: 2px 2px 3px black;
+    margin-bottom: 20px;
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+
+nav {
+    background-color: var(--cor3);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.37);
+}
+
+nav > a {
+    color: var(--cor1);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav > a:hover {
+    background-color: var(--cor1);
+    color: var(--cor5);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+    border-radius: 0px 0px 10px 10px;
+}
+
+main img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    padding: 5px;
+}
+
+main p {
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1em;
+}
+
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main a::before {
+    content: '\1F517';
+}
+
+main img.pequena {
+  max-width: 350px;  
+  display: block; /* As imagens nao se alinhavam com MARGIN: AUTO pois as imagens nao estavam padronizados como bloco e sim como inline*/
+  margin: auto;
+}
+/* Gambiarra para centralizar o vídeo e torna-lo responsivo. Adaptado a mudancas no tamanho da janela*/
+div.video {
+    background-color: var(--cor5);
+    padding: 20px;
+    margin: 0px -20px 30px -20px;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    border-width: 0.1em;
+    border-color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.486) ;
+}
+
+aside h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /* Margens com valores negativos para encaixar o título h3 dentro do background color, movendo o h3 para cima, esquerda e direita e nao para baixo*/
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: var(--cor5);
+    border-radius: 10px;
+    padding: 5px;
+    list-style-type: '\2713\00A0\00A0'; /*00A0: NBSP (No-Break Space - Espaco sem quebra) */
+    text-indent: 30px;
+    list-style-position: inside;
+    columns: 2;
+}
+
+aside > ul >li:hover {
+    color: var(--cor3);
+    cursor: help;
+    transition: 1s;
+}
+
+aside p {
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    line-height: 1.3em;
+    font-size: 0.9em;
+
+}
+
+aside > div {
+    position: relative;
+    margin-top: 10px;
+    column-count: 2;
+}
+
+.square1 {
+    float: left;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: var(--cor5);
+    border-radius: 10px;
+    max-height: 170.312px;
+    min-height: 86.156px;
+    min-width: 170px;
+    padding: 10px;
+}
+
+.square2 {
+    float: right;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: var(--cor5);
+    border-radius: 10px;
+    margin: 0px;
+    max-height: 170.312px;
+    min-height: 86.156px;
+    min-width: 170px;
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}

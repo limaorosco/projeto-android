@@ -211,8 +211,9 @@ aside p {
 }
 
 aside > div {
-    position: relative;
+    overflow: hidden;
     margin-top: 10px;
+    margin-bottom: 10px;
     column-count: 2;
 }
 
